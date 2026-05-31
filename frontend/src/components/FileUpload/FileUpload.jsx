@@ -2,12 +2,11 @@ import React from "react";
 
 const FileUpload = () => {
   return (
-    <div className="mt-8">
+    <div className="mt-4">
       <label
         htmlFor="file-upload"
-        className="flex h-[340px] w-full cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed border-gray-300 bg-white"
+        className="flex h-[340px] w-full cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed border-gray-300 bg-white hover:border-blue-400 hover:bg-blue-50 transition-all duration-300"
       >
-        {/* Icon */}
         <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-gray-100">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -20,17 +19,14 @@ const FileUpload = () => {
           </svg>
         </div>
 
-        {/* Heading */}
-        <h2 className="text-4xl font-semibold text-slate-800">
+        <h2 className="text-2xl font-semibold text-slate-800">
           Drop files here or click to browse
         </h2>
 
-        {/* Subtext */}
-        <p className="mt-3 text-xl text-slate-500">
+        <p className="mt-3 text-sm text-slate-500">
           Any file type · Up to 20 MB per file
         </p>
 
-        {/* Tags */}
         <div className="mt-8 flex gap-3">
           <span className="rounded-full bg-gray-100 px-4 py-2 text-sm font-medium">
             Single file
