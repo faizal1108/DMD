@@ -38,10 +38,7 @@ const FileUpload = () => {
         status: "pending",
       }));
       setUploadQueue(queue);
-
-      // Mark all as uploading
       setUploadQueue((q) => q.map((item) => ({ ...item, status: "uploading" })));
-
       try {
         const formData = new FormData();
         valid.forEach((f) => formData.append("files", f));
@@ -141,7 +138,6 @@ const FileUpload = () => {
           onChange={onInputChange}
         />
       </div>
-
       {error && (
         <div className="mt-3 flex items-center gap-2 rounded-xl bg-red-50 px-4 py-3 border border-red-100 animate-fade-in">
           <svg viewBox="0 -960 960 960" fill="#ef4444" width={16} height={16}>
