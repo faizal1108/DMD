@@ -1,0 +1,26 @@
+import React from "react";
+import "../styles/Navbar.css";
+
+const Navbar = () => {
+  return (
+    <nav className="navbar">
+      <div className="navbar-left">
+        <div className="logo-box">
+          <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#FFFFFF"><path d="M444-240h72v-150l57 57 51-51-144-144-144 144 51 51 57-57v150ZM263.72-96Q234-96 213-117.15T192-168v-624q0-29.7 21.15-50.85Q234.3-864 264-864h312l192 192v504q0 29.7-21.16 50.85Q725.68-96 695.96-96H263.72ZM528-624v-168H264v624h432v-456H528ZM264-792v189-189 624-624Z"/></svg>
+        </div>
+
+        <h2 className="logo-text">SWS AI Document Hub</h2>
+
+        <span className="demo-badge">LIVE DEMO</span>
+      </div>
+
+      <div className="navbar-right">
+        <button className="notification-btn">
+          🔔
+        </button>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
