@@ -127,13 +127,11 @@ const DocumentTable = () => {
         ) : documents.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-16 gap-3 text-slate-400">
             <div className="w-16 h-16 bg-slate-100 rounded-2xl flex items-center justify-center">
-              <svg viewBox="0 -960 960 960" fill="currentColor" width={32} height={32}>
-                <path d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Z" />
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#666666"><path d="M280-280q-33 0-56.5-23.5T200-360v-400q0-33 23.5-56.5T280-840h560q33 0 56.5 23.5T920-760v400q0 33-23.5 56.5T840-280H280Zm0-200v120h560v-120H698q-21 36-57 58t-81 22q-45 0-81-22t-57-58H280Zm280 0q33 0 56.5-23.5T640-560h200v-200H280v200h200q0 33 23.5 56.5T560-480Zm200 360H120q-33 0-56.5-23.5T40-200v-480h80v480h640v80ZM280-360h560-560Z"/></svg>
             </div>
             <div className="text-center">
               <p className="font-medium text-slate-500">No documents yet</p>
-              <p className="text-sm mt-1">Upload files above to see them here</p>
+              <p className="text-sm mt-1"> Upload files above — they'll appear here once complete</p>
             </div>
           </div>
         ) : (

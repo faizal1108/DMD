@@ -20,7 +20,6 @@ const io = new Server(server, {
     credentials: true,
   },
 });
-
 app.set("io", io);
 
 app.use(
@@ -34,11 +33,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api", documentRoutes);
 app.use("/api", notificationRoutes);
-
 setupSocket(io);
-
 const PORT = process.env.PORT || 5000;
-
 connectDB().then(() => {
   server.listen(PORT, () => {
     console.log(` Server running on http://localhost:${PORT}`);

@@ -40,8 +40,7 @@ const formatTime = (ts) => {
 };
 
 const NotificationDropdown = ({ onClose }) => {
-  const { notifications, unreadCount, markRead, markAllRead, removeNotification, loading } =
-    useNotifications();
+  const { notifications, unreadCount, markRead, markAllRead, loading } = useNotifications();
 
   const recent = notifications.slice(0, 8);
 
@@ -49,7 +48,7 @@ const NotificationDropdown = ({ onClose }) => {
     <div className="absolute right-0 top-full mt-2 w-96 bg-white rounded-2xl shadow-xl border border-slate-100 animate-slide-down overflow-hidden z-50">
       <div className="flex items-center justify-between px-4 py-3 border-b border-slate-100">
         <div className="flex items-center gap-2">
-          <h3 className="font-semibold text-slate-800 font-display">Notifications</h3>
+          <h3 className="font-semibold text-slate-800">Notifications</h3>
           {unreadCount > 0 && (
             <span className="bg-blue-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
               {unreadCount}
@@ -65,7 +64,6 @@ const NotificationDropdown = ({ onClose }) => {
           </button>
         )}
       </div>
-
       <div className="max-h-80 overflow-y-auto divide-y divide-slate-50">
         {loading && (
           <div className="flex items-center justify-center py-8">
@@ -103,7 +101,7 @@ const NotificationDropdown = ({ onClose }) => {
       </div>
       <div className="border-t border-slate-100 px-4 py-2.5">
         <Link
-          to="/notifications"
+          to="/demo/notifications"
           onClick={onClose}
           className="block text-center text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors"
         >

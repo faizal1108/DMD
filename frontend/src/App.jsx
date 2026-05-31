@@ -1,14 +1,22 @@
-import './App.css'
-import Navbar  from './components/Navbar/Navbar'
-import UploadPage from './pages/UploadPage'
-function App() {
+import React from "react";
+import { Outlet } from "react-router-dom";
+import { NotificationProvider } from "./context/NotificationContext";
+import { DocumentProvider } from "./context/DocumentContext";
+import Navbar from "./components/Navbar/Navbar";
 
+function App() {
   return (
-    <>
-        <Navbar />
-        <UploadPage />
-    </>
-  )
+    <NotificationProvider>
+      <DocumentProvider>
+        <div className="min-h-screen bg-slate-50">
+          <Navbar />
+          <main>
+            <Outlet />
+          </main>
+        </div>
+      </DocumentProvider>
+    </NotificationProvider>
+  );
 }
 
-export default App
+export default App;
